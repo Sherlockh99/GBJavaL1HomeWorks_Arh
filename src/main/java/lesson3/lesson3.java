@@ -3,6 +3,7 @@ package lesson3;
 import java.util.Arrays;
 
 public class lesson3 {
+
     public static void main(String[] args) {
 
         System.out.println("Задание 1");
@@ -24,6 +25,20 @@ public class lesson3 {
 
         System.out.println("Задание 6");
         minMax();
+
+        System.out.println("Задание 7");
+        int arr3[] = {2, 2, 2, 1, 2, 2, 10, 1};
+        boolean result = checkBalance(arr3);
+        System.out.println(result);
+
+        int arr4[] = {1, 1, 1, 2, 1};
+        result = checkBalance(arr4);
+        System.out.println(result);
+
+        int arr5[] = {1, 1, 1, 8, 1};
+        result = checkBalance(arr5);
+        System.out.println(result);
+
 
     }
 
@@ -91,5 +106,34 @@ public class lesson3 {
         temp = null;
     }
 
-    
+    public static boolean checkBalance(int[] arr){
+        int i = 0;
+        int j = arr.length - 1;
+        int sum_begin = arr[0];
+        int sum_end = arr[arr.length-1];
+        boolean result = false;
+        while (true){
+            if(sum_begin == sum_end && (i==j-1)){
+                result = true;
+                break;
+            }
+
+            if(sum_begin>sum_end){
+                j = j - 1;
+            }else{
+                i = i + 1;
+            }
+            if(i>=j){
+                break;
+            }
+            if(sum_begin>sum_end) {
+                sum_end = sum_end + arr[j];
+            }else {
+                sum_begin = sum_begin + arr[i];
+            }
+        }
+
+        return result;
+    }
+
 }
