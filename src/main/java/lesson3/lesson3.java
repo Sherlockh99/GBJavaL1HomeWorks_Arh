@@ -39,7 +39,14 @@ public class lesson3 {
         result = checkBalance(arr5);
         System.out.println(result);
 
+        System.out.println("Задание 8");
+        int arr6[] = {1, 2, 3, 4, 5};
+        arrayOffset(arr6,3);
+        printArray(arr6);
 
+        int arr7[] = {1, 2, 3, 4, 5};
+        arrayOffset(arr7,-3);
+        printArray(arr7);
     }
 
     public static void array01(){
@@ -102,7 +109,7 @@ public class lesson3 {
         int arr[] = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         int[] temp = arr.clone();
         Arrays.sort(temp);
-        System.out.println("Минимальное значение: " + temp[0] + "; Максимальное значение - " + temp[temp.length-1]);
+        System.out.println("Минимальное значение: " + temp[0] + "; Максимальное значение: " + temp[temp.length-1]);
         temp = null;
     }
 
@@ -136,4 +143,24 @@ public class lesson3 {
         return result;
     }
 
+    public static void arrayOffset(int[] arr, int n){
+        int temp;
+        for (int i = 0; i < Math.abs(n); i++) {
+            if(n>=0) {
+                temp = arr[arr.length - 1];
+                for (int j = arr.length-1; j > 0; j--) {
+                    arr[j] = arr[j-1];
+                }
+                arr[0] = temp;
+            }else{
+                temp = arr[0];
+                for (int j = 0; j <arr.length-1; j++) {
+                    arr[j]=arr[j+1];
+                }
+                arr[arr.length-1]=temp;
+            }
+
+            //System.out.println(arr);
+        }
+    }
 }
