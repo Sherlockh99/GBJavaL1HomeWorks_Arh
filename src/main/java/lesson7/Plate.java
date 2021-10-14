@@ -7,8 +7,13 @@ public class Plate {
         this.food = food;
     }
 
-    public void decreaseFood(int amount) {
-        food -= amount;
+    public boolean decreaseFood(int amount) {
+        if(amount<=food) {
+            food -= amount;
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public int getFood() {
@@ -17,5 +22,9 @@ public class Plate {
 
     public void info() {
         System.out.printf("Plate [ Food: %d ]\n", food);
+    }
+
+    public void addFood(int food){
+        this.food+=food;
     }
 }
