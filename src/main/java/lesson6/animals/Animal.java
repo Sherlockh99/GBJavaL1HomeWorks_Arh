@@ -1,11 +1,23 @@
 package lesson6.animals;
 
-public class Animal {
+public abstract class Animal {
     protected String name;
     protected int age;
-    protected String color;
+    protected int limitation;
+    protected static int count;
 
-    public Animal(String name, int age, String color){
-
+    public static int getCount() {
+        return count;
     }
+
+    public void run(int distance){
+        if(distance>limitation){
+            System.out.println(name + " не пробежит такую дистанцию. Ограничение: " + limitation + " метров.");
+        }else {
+            System.out.println(name + " пробежал " + distance + " метров.");
+        }
+    }
+
+
+    public abstract void swim(int distance);
 }
