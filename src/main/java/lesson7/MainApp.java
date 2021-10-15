@@ -34,8 +34,9 @@ public class MainApp {
                 cats[i].eat(plateCats);
             }
         }
-        
+
         System.out.println("----------------------");
         Cat.Satiety(cats);
+
     }
 }
