@@ -25,6 +25,11 @@ import java.util.Arrays;
  * the method must return true if there is a place in the array
  * where the sum of the left and right parts of the array are equal. (see checkBalance)
  *
+ * 8. *** Write a method that receives a one-dimensional array and the number n
+ * (can be positive or negative) as input,
+ * while the method must shift all elements of the array by n positions.
+ * Elements move cyclically. (see arrayOffset)
+ *
  * P.S. Some method names are not implemented in CamelCase style for ease of understanding. (see arrayOffset)
  */
 
