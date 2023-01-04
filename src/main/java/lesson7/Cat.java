@@ -3,8 +3,18 @@ package lesson7;
 public class Cat {
     private String name;
     private int appetite;
-    private boolean isHungry;
+    //private boolean isHungry;
     private boolean satiety;
+
+    /*
+    public boolean isHungry() {
+        return isHungry;
+    }
+
+    public void setHungry(boolean hungry) {
+        isHungry = hungry;
+    }
+*/
 
     public boolean isSatiety() {
         return satiety;
@@ -13,12 +23,8 @@ public class Cat {
     public Cat(String name) {
         this.name = name;
         this.appetite = 5;
-        this.isHungry = true;
+        //this.isHungry = true;
         this.satiety = false;
-    }
-
-    public void setHungry(boolean hungry) {
-        isHungry = hungry;
     }
 
     public int getAppetite() {
@@ -30,17 +36,19 @@ public class Cat {
     }
 
     public void info() {
-        System.out.println("Name: " + name + ", hungry: " + isHungry);
+        System.out.println("Name: " + name + ", satiety: " + satiety);
     }
 
     public void eat(Plate plate) {
         if(plate.decreaseFood(appetite)){
-            isHungry = false;
+            //isHungry = false;
             satiety = true;
             System.out.println(name + " поел из тарелки");
         }else{
+            /*
             isHungry = true;
             satiety =false;
+            */
             System.out.println(name + " не хватает еды в тарелке");
         };
     }

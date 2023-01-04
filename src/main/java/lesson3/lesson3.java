@@ -159,8 +159,6 @@ public class lesson3 {
                 }
                 arr[arr.length-1]=temp;
             }
-
-            //System.out.println(arr);
         }
     }
 }
