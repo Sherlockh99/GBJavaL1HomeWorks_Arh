@@ -19,20 +19,20 @@ public class lesson1 {
         int b = 5;
         int sum = a + b;
         if(sum>=0){
-            System.out.println("Сумма положительная");
+            System.out.println("Sum is positive");
         } else {
-            System.out.println("Сумма отрицательная");
+            System.out.println("Sum is negative");
         }
     }
 
     public static void printColor(){
         int value = 999;
         if(value<=0){
-            System.out.println("Красный");
+            System.out.println("RED");
         }else if(value<=100){
-            System.out.println("Желтый");
+            System.out.println("ORANGE");
         }else {
-            System.out.println("Зеленый");
+            System.out.println("GREEN");
         }
     }
 
